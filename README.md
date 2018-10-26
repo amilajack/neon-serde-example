@@ -2,14 +2,18 @@
 
 This is an example of using the `neon-serde` crate
 
+## Setup
+
 ```bash
 git clone https://github.com/amilajack/neon-serde-example
 cd neon-serde-example
 neon build
 ```
 
-### JS
+## Native
+
 ```rust
+// ./native/src/lib.rs
 #[macro_use]
 extern crate neon;
 #[macro_use]
@@ -43,8 +47,10 @@ export! {
 }
 ```
 
-### JS
+## Node
+
 ```js
+// ./lib/index.js
 const addon = require('../native');
 
 // console.log(addon.say_hello());
